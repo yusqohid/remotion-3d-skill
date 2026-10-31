@@ -20,9 +20,26 @@
 ### 1.2 Objective
 Develop a production-grade, modular **3D Animation Asset Library** tailored for Remotion and autonomous AI agents:
 1. Provide a deterministic frame-driven animation engine for Three.js.
-2. Deliver a curated collection of reusable 3D assets (Procedural Characters, Motion Graphics, Staging/Environments, Cinematic Cameras, and VFX Transitions).
-3. Provide an interactive Remotion Studio workspace for real-time previewing and offline MP4 rendering.
+2. Deliver a curated collection of reusable 3D assets inspired by the **Low-Poly Miniature Diorama & Explainer** aesthetic (stylized low-poly characters, cutaway/x-ray structural sections, technical annotations, and miniature environments) alongside modern motion graphics.
+3. Provide an interactive Remotion Studio workspace with first-class support for both vertical 9:16 (Shorts/Reels/TikTok) and horizontal 16:9 video formats.
 4. Package the system as an **Antigravity Agent Skill** (`remotion-3d-assets`) enabling AI agents to autonomously scaffold, customize, and render 3D video compositions.
+
+---
+
+## 2. Visual Direction & Style References (Diorama Explainer Style)
+
+Based on reference studies (`reference/reference-01.mp4` and `reference/reference-02.mp4`), the visual design adheres to a **Stylized Low-Poly Miniature Diorama & Explainer** art direction (used as visual inspiration, not a clone):
+
+1. **Geometry & Meshes**:
+   - Clean, faceted low-poly geometry (faceted tree foliage, geometric vehicles, beveled building blocks, miniature urban elements).
+   - Cutaway / X-Ray reveals: Cross-sections exposing inner structures (e.g., rebar inside concrete beams, soil/water layers, building interiors).
+2. **Color Palette & Lighting**:
+   - Warm, soft natural daylight with soft contact shadows and subtle ambient bounce.
+   - Palette: Warm sand/beige neutrals (`#e8dfd5`), sage/olive greens (`#688b58`), terracotta/brick red (`#c85a42`), safety orange (`#f97316`), and crisp technical cobalt/cyan accents (`#2563eb`, `#06b6d4`).
+3. **Stylized Characters**:
+   - Low-poly minimalist humanoid characters (bead eyes, clean hair silhouettes, hoodies/jackets, hardhats/vests) capable of presenting, waving, riding vehicles, and pointing at callouts.
+4. **Information Design & Annotations**:
+   - 3D-anchored technical callout pins with leader lines, dynamic force/movement arrows, and clean typography badges for educational/explainer content.
 
 ---
 
@@ -70,20 +87,26 @@ Develop a production-grade, modular **3D Animation Asset Library** tailored for 
 
 ### 4.2 3D Asset Catalog (`@3d-assets/assets`)
 - **FR-2.1 Character Rigs**:
-  - `<Stickman3D />`: Low-overhead procedural stickman mesh with parameterized poses: `walk`, `wave`, `point`, `idleBounce`, `jump`.
+  - `<LowPolyCharacter />`: Stylized low-poly character with customizable skins (Presenter/Casual, Construction Worker with hardhat & vest, Scooter Rider) and deterministic action poses (`idle`, `point`, `wave`, `walk`, `ride`).
+  - `<Stickman3D />`: Low-overhead procedural stickman mesh with parameterized poses.
   - `<MascotBot />`: Stylized robotic mascot with emissive eyes and floating appendages.
-- **FR-2.2 Motion Graphics & Data Visualizers**:
+- **FR-2.2 Explainer & Structural Cutaway Assets**:
+  - `<StructuralCutaway />`: Cross-section component (e.g. concrete beam showing internal steel rebar, earth/soil strata cutaway, sliced architectural walls).
+  - `<TechnicalCallout3D />`: 3D-tracked leader line anchored to world coordinates, with pin indicator, title badge, and spring entrance.
+  - `<ForceVectorArrow />`: 3D dynamic directional arrows and load indicators (sway, tension, compression, earthquake motion).
+- **FR-2.3 Motion Graphics & Data Visualizers**:
   - `<FloatingGlassCard />`: 3D card with frosted glass material, border glow, title/icon mesh, and spring entrance.
   - `<Animated3DBarChart />`: 3D data bars with sequential/staggered growth animation, customizable color palettes, and value labels.
   - `<CryptoToken3D />`: 3D beveled coin with customizable embossed logo, edge grooves, and continuous spin + tilt bob.
   - `<HologramRing />`: Multi-layered concentric cybernetic rings with counter-rotations and pulse waves.
-- **FR-2.3 Stages & Environments**:
+- **FR-2.4 Stages & Diorama Environments**:
+  - `<DioramaStage />`: Low-poly ground chunk/slice (earth/soil, grass, water river section, road) with stylized trees, fences, and miniature props.
   - `<StudioStage />`: Cylindrical podium with bevels, floor reflections, and dramatic downlights.
   - `<InfiniteCyberGrid />`: Vanishing perspective grid plane with customizable line thickness and neon glow.
   - `<ParticleUniverse />`: Deterministic swirling dust/star particles with noise displacement.
-- **FR-2.4 Camera Choreography**:
-  - `<CinematicCamera />`: Frame-driven camera supporting camera cuts, smooth pan/tilt, target tracking, zoom push-ins, and realistic handheld micro-vibration.
-- **FR-2.5 3D Transitions & FX**:
+- **FR-2.5 Camera Choreography**:
+  - `<CinematicCamera />`: Frame-driven camera supporting camera cuts, smooth pan/tilt, target tracking, zoom push-ins, and realistic handheld micro-vibration. Optimized for both 9:16 vertical and 16:9 compositions.
+- **FR-2.6 3D Transitions & FX**:
   - `<VoxelShatter />`: Disintegrates any mesh into small 3D cubes propelled outward and fading out.
   - `<WarpTunnel />`: Warp-speed hyperdrive tunnel effect for fast scene transitions.
 
