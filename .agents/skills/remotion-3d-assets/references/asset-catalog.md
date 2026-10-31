@@ -1,0 +1,142 @@
+# Remotion 3D Asset Library - Catalog & Reference
+
+This catalog details all declarative 3D components available in `@3d-assets/assets` and `@3d-assets/remotion`.
+
+---
+
+## 1. Characters (`@3d-assets/assets`)
+
+### `<LowPolyCharacter />`
+Stylized low-poly humanoid character with customizable skins and deterministic animations.
+- **Props**:
+  - `variant`: `'casual'` | `'worker'` | `'scooterRider'` (default: `'casual'`)
+  - `action`: `'idle'` | `'walk'` | `'wave'` | `'point'` | `'ride'` (default: `'idle'`)
+  - `scale`: `number` (default: `1`)
+  - `position`: `[x, y, z]` (default: `[0, 0, 0]`)
+  - `rotationY`: `number` (rotation in radians)
+  - `vestColor`: `string` (hex, default: `'#f97316'`)
+  - `hairColor`: `string` (hex, default: `'#4a2e18'`)
+  - `skinColor`: `string` (hex, default: `'#f5c396'`)
+  - `pantsColor`: `string` (hex, default: `'#334155'`)
+
+### `<Stickman3D />`
+Minimalist 3D stickman with articulated joints and action poses.
+- **Props**:
+  - `action`: `'idle'` | `'walk'` | `'wave'` | `'point'` | `'jump'` (default: `'idle'`)
+  - `color`: `string` (default: `'#ffffff'`)
+  - `headColor`: `string` (default: `'#ffffff'`)
+  - `limbThickness`: `number` (default: `0.06`)
+  - `scale`: `number` (default: `1`)
+  - `position`: `[x, y, z]`
+
+---
+
+## 2. Explainer & Structural Cutaway Assets (`@3d-assets/assets`)
+
+### `<StructuralCutaway />`
+Cross-section of a concrete beam showing interior steel rebars and stirrups (*sengkang*), featuring animated load deflection.
+- **Props**:
+  - `length`: `number` (beam length, default: `6`)
+  - `height`: `number` (beam height, default: `0.8`)
+  - `depth`: `number` (beam depth, default: `0.8`)
+  - `showCutaway`: `boolean` (makes casing transparent to show interior rebars, default: `true`)
+  - `deflectionAmount`: `number` (sagging depth under load, default: `0.25`)
+  - `startSagFrame`: `number` (frame when deflection begins, default: `15`)
+  - `position`: `[x, y, z]`
+  - `rebarColor`: `string` (default: `'#2563eb'`)
+  - `stirrupColor`: `string` (default: `'#dc2626'`)
+
+### `<TechnicalCallout3D />`
+3D-anchored pin with a leader line, anchor point, and floating badge with spring entrance.
+- **Props**:
+  - `title`: `string` (badge label)
+  - `anchorPosition`: `[x, y, z]` (world point on object)
+  - `badgeOffset`: `[dx, dy, dz]` (relative badge offset)
+  - `startFrame`: `number` (trigger frame, default: `10`)
+  - `badgeColor`: `string` (hex, default: `'#2563eb'`)
+
+### `<ForceVectorArrow />`
+Dynamic 3D directional arrow demonstrating force, pressure, tension, or sway.
+- **Props**:
+  - `direction`: `'down'` | `'up'` | `'left'` | `'right'` | `'sway'` (default: `'down'`)
+  - `length`: `number` (default: `1.2`)
+  - `color`: `string` (default: `'#2563eb'`)
+  - `position`: `[x, y, z]`
+  - `animated`: `boolean` (subtle pulse or sway)
+
+---
+
+## 3. Environments & Stages (`@3d-assets/assets`)
+
+### `<DioramaStage />`
+Floating 3D ground chunk with subsoil cross-section, top grass, faceted low-poly trees, and picket fence.
+- **Props**:
+  - `width`: `number` (default: `12`)
+  - `depth`: `number` (default: `12`)
+  - `groundColor`: `string` (default: Sage green)
+  - `soilColor`: `string` (default: Brown earth)
+  - `showTrees`: `boolean` (default: `true`)
+  - `showFence`: `boolean` (default: `true`)
+  - `position`: `[x, y, z]`
+
+### `<InfiniteCyberGrid />`
+Perspective infinite glowing grid floor with animated forward velocity.
+- **Props**:
+  - `size`: `number` (default: `40`)
+  - `divisions`: `number` (default: `40`)
+  - `colorCenterLine`: `string` (default: `'#06b6d4'`)
+  - `colorGrid`: `string` (default: `'#1e293b'`)
+  - `speed`: `number` (default: `0.5`)
+  - `position`: `[x, y, z]`
+
+---
+
+## 4. Motion Graphics & Data Visualizers (`@3d-assets/assets`)
+
+### `<FloatingGlassCard />`
+Frosted glass card with glowing border, decorative tag, chip node, and spring entrance.
+- **Props**:
+  - `title`: `string`
+  - `color`: `string` (glow color, default: `'#06b6d4'`)
+  - `width`: `number` (default: `3.6`)
+  - `height`: `number` (default: `2.2`)
+  - `position`: `[x, y, z]`
+  - `startFrame`: `number` (default: `5`)
+
+### `<Animated3DBarChart />`
+3D bar chart with staggered spring growth animation and glowing indicator caps.
+- **Props**:
+  - `values`: `number[]` (e.g. `[4, 7, 5, 9, 12]`)
+  - `colors`: `string[]` (hex color array)
+  - `position`: `[x, y, z]`
+  - `staggerDelay`: `number` (frames between bars)
+
+### `<CryptoToken3D />`
+Beveled 3D gold or neon coin with embossed emblem and continuous deterministic spin.
+- **Props**:
+  - `color`: `string` (default: `'#fbbf24'`)
+  - `radius`: `number` (default: `1.2`)
+  - `thickness`: `number` (default: `0.25`)
+  - `rotationSpeed`: `number` (default: `0.4`)
+  - `position`: `[x, y, z]`
+
+---
+
+## 5. Camera & Canvas (`@3d-assets/remotion`)
+
+### `<ThreeCanvasContainer />`
+Wrapper synchronizing Three.js rendering with Remotion's frame clock and WebGL setup.
+- **Props**:
+  - `children`: React Three Fiber nodes
+  - `clearColor`: `string` (background color)
+  - `shadows`: `boolean` (default: `true`)
+
+### `<CinematicCamera />`
+Deterministic camera rig that drives perspective camera transforms strictly from frame.
+- **Props**:
+  - `mode`: `'static'` | `'orbit'` | `'pushIn'` | `'handheldDrift'`
+  - `position`: `[x, y, z]`
+  - `target`: `[x, y, z]` (lookAt target)
+  - `fov`: `number` (field of view, default: `40`)
+  - `orbitSpeed`: `number` (default: `0.2`)
+  - `shakeIntensity`: `number` (default: `0.05`)
