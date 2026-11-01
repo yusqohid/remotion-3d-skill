@@ -1,8 +1,31 @@
 {
   "name": "remotion-3d-skill",
   "version": "1.0.0",
-  "description": "Standalone Universal Multi-Agent Skill for composing and rendering deterministic 3D Remotion video assets",
+  "description": "Standalone Universal Multi-Agent Skill & CLI for composing and rendering deterministic 3D Remotion video assets",
   "license": "MIT",
+  "author": "Yusqo Hid",
+  "bin": {
+    "remotion-3d-skill": "./bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "scripts",
+    "templates",
+    "references",
+    "SKILL.md",
+    "README.md",
+    "LICENSE",
+    "AGENTS.md",
+    "CLAUDE.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yusqohid/remotion-3d-skill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yusqohid/remotion-3d-skill/issues"
+  },
+  "homepage": "https://github.com/yusqohid/remotion-3d-skill#readme",
   "keywords": [
     "remotion",
     "threejs",
