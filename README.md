@@ -1,4 +1,4 @@
-# 3D Animation Asset Library for Remotion & Antigravity Agent Skill
+# Remotion 3D Skill — Universal 3D Asset & Autonomous Directing Library
 
 A production-grade, deterministic 3D animation library built with **Three.js**, **React Three Fiber**, and **Remotion**, paired with an **Antigravity Agent Skill** for automated 3D video directing and scene assembly.
 
@@ -125,20 +125,15 @@ The agent automatically:
 
 To publish this repository to your GitHub account:
 
-### 1. Create a New Repository on GitHub
-Go to [github.com/new](https://github.com/new) and create a repository named `3d-assets` (or your preferred name). You can choose **Public** or **Private**. Do **not** initialize with a README, .gitignore, or license (they are already included).
+### 1. Repository
+Repository: [github.com/yusqohid/remotion-3d-skill](https://github.com/yusqohid/remotion-3d-skill)
 
-### 2. Link Remote & Push
-In your terminal, run:
+### 2. Clone & Setup
 ```bash
-# Add your GitHub repository as origin (replace with your repo URL)
-git remote add origin https://github.com/<YOUR-USERNAME>/3d-assets.git
-
-# Ensure default branch is main
-git branch -M main
-
-# Push all commits and branches
-git push -u origin main
+git clone https://github.com/yusqohid/remotion-3d-skill.git
+cd remotion-3d-skill
+npm install
+npm run dev
 ```
 
 ---
