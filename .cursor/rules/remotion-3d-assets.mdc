@@ -1,0 +1,34 @@
+---
+description: Deterministic 3D animation, Three.js, React Three Fiber, and Remotion scene creation guidelines
+globs: "apps/**/*.tsx,packages/**/*.ts,packages/**/*.tsx"
+alwaysApply: false
+---
+
+# Cursor Rule: Remotion 3D Animation Asset Library
+
+When working on 3D scenes, Three.js components, or Remotion compositions in this repository, strictly adhere to these standards:
+
+## 1. Prime Directive: The Deterministic Frame Contract
+- **Never use real-time clocks**: Do not use `Date.now()`, `performance.now()`, `requestAnimationFrame()`, or `THREE.Clock.getDelta()`.
+- **Pure frame function**: Every 3D transform (position, rotation, scale, material property, camera pose) must be driven by `frame` from `useCurrentFrame()` and `fps` from `useVideoConfig()`.
+- **Spring animations**: Use Remotion's `spring({ frame, fps, config })`.
+- **Interpolations**: Use Remotion's `interpolate(frame, [inStart, inEnd], [outStart, outEnd], { extrapolateLeft, extrapolateRight })`.
+
+## 2. Component Architecture
+- 3D assets reside in `packages/assets/src/`.
+- Canvas wrapper and cinematic camera rigs reside in `packages/remotion/src/`.
+- Deterministic math, noise, lighting, and materials reside in `packages/core/src/`.
+- Visual compositions and scenes reside in `apps/studio/src/scenes/`.
+- All reusable assets must expose a Zod schema for runtime validation (e.g. `stickman3DPropsSchema`).
+
+## 3. Tooling & CLI Commands
+- Inspect assets: `npm run list-assets`
+- Check types: `npm run typecheck`
+- Launch studio: `npm run dev`
+- Render preview: `npm run still -- <CompositionId> out/preview.jpeg --frame=30`
+- Render video: `npm run render -- <CompositionId> out/<CompositionId>.mp4`
+
+## 4. References & Catalogs
+- Catalog: `.agents/skills/remotion-3d-assets/references/asset-catalog.md`
+- Camera recipes: `.agents/skills/remotion-3d-assets/references/camera-recipes.md`
+- Templates: `.agents/skills/remotion-3d-assets/references/composition-templates.md`

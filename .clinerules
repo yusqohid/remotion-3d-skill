@@ -1,0 +1,21 @@
+# Cline / Roo Code System Rules for Remotion 3D Assets
+
+You are assisting with the 3D Assets for Remotion codebase.
+
+1. **Strict Deterministic Frame Contract**:
+   - Video rendering is offline and frame-based.
+   - Do NOT use `Date.now()`, `Clock.getDelta()`, `requestAnimationFrame()`, or unseeded `Math.random()`.
+   - Calculate all 3D mesh transforms purely from `frame` (`useCurrentFrame()`) and `fps` (`useVideoConfig()`).
+
+2. **Codebase Standards**:
+   - Reusable 3D assets: `packages/assets/src/` with corresponding Zod schemas.
+   - Canvas & Camera: `packages/remotion/src/`
+   - Math & Lighting: `packages/core/src/`
+   - Compositions: `apps/studio/src/`
+   - Commits: Conventional Commits (`feat(scope): ...`, `fix(scope): ...`).
+
+3. **Useful CLI Scripts**:
+   - `npm run list-assets` (inspect 3D component catalog)
+   - `npm run scaffold` (generate scene templates)
+   - `npm run typecheck` (verify TypeScript)
+   - `npm run still -- <CompositionId> out/preview.jpeg --frame=30` (test frame render)

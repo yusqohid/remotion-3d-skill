@@ -1,0 +1,15 @@
+# Windsurf Cascade Rules for Remotion 3D Assets
+
+## Project Overview
+This repository contains a deterministic 3D animation library using Three.js, React Three Fiber, and Remotion.
+
+## Prime Directive: Deterministic Rendering
+- NEVER use real-time or asynchronous clocks (`Date.now()`, `Clock.getDelta()`, `requestAnimationFrame()`, `setTimeout`).
+- All 3D movement and shaders MUST be pure deterministic functions of Remotion's `frame` and `fps`.
+- Use Remotion's native `spring` and `interpolate` utilities.
+
+## Asset Workflow
+- Available 3D assets are cataloged in `.agents/skills/remotion-3d-assets/references/asset-catalog.md`.
+- Inspect components via CLI: `npm run list-assets`.
+- Scaffold scenes via: `npm run scaffold -- --name=<SceneName> --template=diorama-explainer`.
+- Always verify changes with `npm run typecheck` and test still frames via `npm run still`.
