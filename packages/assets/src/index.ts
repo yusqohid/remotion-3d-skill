@@ -15,9 +15,14 @@ export * from './environments/InfiniteCyberGrid';
 // Urban, Buildings & Vehicles
 export * from './urban/StreetProps';
 export * from './urban/LowPolyCloud';
+export * from './urban/LollipopTree';
 export * from './vehicles/LowPolyCar';
 export * from './vehicles/LowPolyScooter';
 export * from './buildings/LowPolyBuilding';
+export * from './buildings/CurtainWallSkyscraper';
+export * from './buildings/MiniatureHouse';
+export * from './buildings/DistantSkyline';
+export * from './buildings/ModernCityBuildings';
 
 // Motion Graphics
 export * from './mograph/FloatingGlassCard';
