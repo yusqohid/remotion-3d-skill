@@ -5,7 +5,7 @@
 
 export interface AssetMeta {
   name: string;
-  category: 'character' | 'explainer' | 'environment' | 'mograph' | 'camera';
+  category: 'character' | 'explainer' | 'environment' | 'mograph' | 'urban' | 'camera';
   importPath: string;
   description: string;
   props: Record<string, string>;
@@ -92,6 +92,105 @@ export const ASSET_REGISTRY: AssetMeta[] = [
       soilColor: 'hex string',
       showTrees: 'boolean (default: true)',
       showFence: 'boolean (default: true)',
+      position: '[x, y, z]',
+    },
+  },
+  {
+    name: 'UrbanCityDiorama',
+    category: 'environment',
+    importPath: '@3d-assets/assets',
+    description: 'Complete urban city foundation slab with 2-lane asphalt road, crosswalk, sidewalks, lamps, and street trees.',
+    props: {
+      width: 'number (default: 16)',
+      depth: 'number (default: 14)',
+      position: '[x, y, z]',
+      showProps: 'boolean (default: true)',
+    },
+  },
+  {
+    name: 'HighRiseTower',
+    category: 'urban',
+    importPath: '@3d-assets/assets',
+    description: 'Modern low-poly glass skyscraper with repeating window bands, AC chiller box, and antenna mast.',
+    props: {
+      height: 'number (default: 9)',
+      width: 'number (default: 3)',
+      depth: 'number (default: 2.8)',
+      facadeColor: 'hex string',
+      windowColor: 'hex string',
+      position: '[x, y, z]',
+    },
+  },
+  {
+    name: 'Townhouse',
+    category: 'urban',
+    importPath: '@3d-assets/assets',
+    description: 'Stylized 2-3 story townhouse with terracotta roof, commercial shopfront awning, entrance, and windows.',
+    props: {
+      floors: 'number (default: 3)',
+      wallColor: 'hex string',
+      roofColor: 'hex string',
+      hasAwning: 'boolean (default: true)',
+      position: '[x, y, z]',
+    },
+  },
+  {
+    name: 'LowPolyCar',
+    category: 'urban',
+    importPath: '@3d-assets/assets',
+    description: 'Stylized city car / yellow taxi with rotating wheels, glowing headlights/taillights, and suspension bobbing.',
+    props: {
+      variant: "'taxi' | 'sedan' | 'van'",
+      color: 'hex string (default: #facc15)',
+      speed: 'number (units/sec)',
+      startPosition: '[x, y, z]',
+      direction: '1 | -1',
+    },
+  },
+  {
+    name: 'LowPolyScooter',
+    category: 'urban',
+    importPath: '@3d-assets/assets',
+    description: 'Scooter/vespa with seated low-poly rider, handlebar, spinning wheels, and vibration physics.',
+    props: {
+      bodyColor: 'hex string (default: #0284c7)',
+      speed: 'number',
+      startPosition: '[x, y, z]',
+      direction: '1 | -1',
+      riderVariant: "'casual' | 'worker'",
+    },
+  },
+  {
+    name: 'LowPolyCloud',
+    category: 'urban',
+    importPath: '@3d-assets/assets',
+    description: 'Puffy low-poly faceted cloud drifting deterministically across the sky.',
+    props: {
+      position: '[x, y, z]',
+      scale: 'number (default: 1)',
+      driftSpeed: 'number',
+    },
+  },
+  {
+    name: 'Streetlamp',
+    category: 'urban',
+    importPath: '@3d-assets/assets',
+    description: 'Curved streetlamp pole with warm glowing lantern fixture.',
+    props: {
+      height: 'number (default: 2.2)',
+      poleColor: 'hex string',
+      lightColor: 'hex string',
+      position: '[x, y, z]',
+    },
+  },
+  {
+    name: 'TrafficLight',
+    category: 'urban',
+    importPath: '@3d-assets/assets',
+    description: 'Traffic signal post with illuminated red, yellow, or green lights.',
+    props: {
+      height: 'number (default: 2.5)',
+      activeColor: "'red' | 'yellow' | 'green'",
       position: '[x, y, z]',
     },
   },

@@ -9,7 +9,15 @@ export * from './explainer/ForceVectorArrow';
 
 // Environments & Stages
 export * from './environments/DioramaStage';
+export * from './environments/UrbanCityDiorama';
 export * from './environments/InfiniteCyberGrid';
+
+// Urban, Buildings & Vehicles
+export * from './urban/StreetProps';
+export * from './urban/LowPolyCloud';
+export * from './vehicles/LowPolyCar';
+export * from './vehicles/LowPolyScooter';
+export * from './buildings/LowPolyBuilding';
 
 // Motion Graphics
 export * from './mograph/FloatingGlassCard';

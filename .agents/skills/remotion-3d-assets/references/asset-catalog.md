@@ -89,9 +89,70 @@ Perspective infinite glowing grid floor with animated forward velocity.
   - `speed`: `number` (default: `0.5`)
   - `position`: `[x, y, z]`
 
+### `<UrbanCityDiorama />`
+Complete urban city diorama foundation slab with 2-lane asphalt road, crosswalk (zebra cross), sidewalks, streetlamps, traffic light, and trees.
+- **Props**:
+  - `width`: `number` (default: `16`)
+  - `depth`: `number` (default: `14`)
+  - `position`: `[x, y, z]`
+  - `showProps`: `boolean` (default: `true`)
+
 ---
 
-## 4. Motion Graphics & Data Visualizers (`@3d-assets/assets`)
+## 4. Architecture, Vehicles & Urban Elements (`@3d-assets/assets`)
+
+### `<HighRiseTower />`
+Modern low-poly glass skyscraper with repeating window bands, AC chiller box, and antenna mast with warning beacon.
+- **Props**:
+  - `height`: `number` (default: `9`)
+  - `width`: `number` (default: `3`)
+  - `depth`: `number` (default: `2.8`)
+  - `facadeColor`: `string` (default: `'#94a3b8'`)
+  - `windowColor`: `string` (default: `'#38bdf8'`)
+  - `position`: `[x, y, z]`
+
+### `<Townhouse />`
+Stylized 2-3 story townhouse with terracotta roof, commercial shopfront awning, entrance door, and windows.
+- **Props**:
+  - `floors`: `number` (default: `3`)
+  - `wallColor`: `string` (default: `'#f1f5f9'`)
+  - `roofColor`: `string` (default: Terracotta)
+  - `hasAwning`: `boolean` (default: `true`)
+  - `position`: `[x, y, z]`
+
+### `<LowPolyCar />`
+Stylized city car / yellow taxi with rotating wheels, glowing headlights/taillights, and suspension bobbing.
+- **Props**:
+  - `variant`: `'taxi'` | `'sedan'` | `'van'` (default: `'taxi'`)
+  - `color`: `string` (default: `'#facc15'`)
+  - `speed`: `number` (units/sec, default: `3.5`)
+  - `startPosition`: `[x, y, z]`
+  - `direction`: `1` | `-1`
+
+### `<LowPolyScooter />`
+Scooter/vespa with seated low-poly rider, handlebar, spinning wheels, and vibration physics.
+- **Props**:
+  - `bodyColor`: `string` (default: `'#0284c7'`)
+  - `speed`: `number` (default: `2.8`)
+  - `startPosition`: `[x, y, z]`
+  - `direction`: `1` | `-1`
+  - `riderVariant`: `'casual'` | `'worker'`
+
+### `<LowPolyCloud />`
+Puffy low-poly faceted cloud drifting deterministically across the sky.
+- **Props**:
+  - `position`: `[x, y, z]`
+  - `scale`: `number` (default: `1`)
+  - `driftSpeed`: `number` (default: `0.3`)
+
+### `<Streetlamp />` & `<TrafficLight />`
+Urban infrastructure props with glowing fixtures.
+- `Streetlamp`: `height`, `poleColor`, `lightColor`, `position`
+- `TrafficLight`: `height`, `activeColor` (`'red'` | `'yellow'` | `'green'`), `position`
+
+---
+
+## 5. Motion Graphics & Data Visualizers (`@3d-assets/assets`)
 
 ### `<FloatingGlassCard />`
 Frosted glass card with glowing border, decorative tag, chip node, and spring entrance.
