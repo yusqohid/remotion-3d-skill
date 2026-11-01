@@ -90,22 +90,58 @@ npm run still -- TechShowcase out/preview-tech.jpeg --frame=30
 ### 4. Render Final Video MP4
 ```bash
 npm run render -- DioramaExplainer out/DioramaExplainer.mp4
+npm run render -- UrbanCity out/UrbanCity.mp4
 ```
 
 ---
 
-## 🤖 Using the Antigravity Agent Skill
+## 🤖 Universal Multi-Agent Support
 
-When an AI agent is active in this repository or invoked with a prompt like:
+This repository is engineered as an **Omni-Agent Skill Library**. It can be piloted autonomously not only by **Google DeepMind Antigravity**, but by all major AI coding agents:
+
+| AI Agent / IDE | Configuration Location | Integration Method |
+| :--- | :--- | :--- |
+| **Google Antigravity** | `.agents/skills/remotion-3d-assets/SKILL.md` & `AGENTS.md` | Native Agent Skill & prime directive |
+| **Anthropic Claude Code** | `.claude/skills/remotion-3d-assets/` & `CLAUDE.md` | Native skill format + project instructions |
+| **Cursor IDE (Agent)** | `.cursor/rules/remotion-3d-assets.mdc` | Cursor Rule with contextual glob matching |
+| **Windsurf (Cascade)** | `.windsurfrules` | Cascade workspace memory & frame contract |
+| **Cline / Roo Code** | `.clinerules` | System prompt instructions |
+| **GitHub Copilot** | `.github/copilot-instructions.md` | Workspace copilot guidelines |
+
+### How Agents Execute 3D Directing
+
+When you prompt any supported AI agent with an instruction such as:
 > *"Create a 10-second 9:16 explainer video showing an engineer pointing to a sagging concrete beam with a downward load arrow"*
 
 The agent automatically:
-1. Consults `.agents/skills/remotion-3d-assets/references/asset-catalog.md`.
-2. Scaffolds a new composition via `npx tsx .agents/skills/remotion-3d-assets/scripts/scaffold-scene.ts`.
-3. Assembles the declarative components (`<DioramaStage />`, `<StructuralCutaway />`, `<LowPolyCharacter />`, `<TechnicalCallout3D />`).
-4. Verifies the rendered frame via `npx remotion still ...` and outputs the final video.
+1. **Catalog Lookup**: Consults `.agents/skills/remotion-3d-assets/references/asset-catalog.md` or runs `npm run list-assets`.
+2. **Deterministic Code Generation**: Generates pure frame-clock animations adhering to the **Deterministic Frame Contract** (no `Date.now()`, no `requestAnimationFrame`).
+3. **Scene Scaffolding**: Leverages `npm run scaffold -- --name=... --template=...`.
+4. **Verification**: Renders a still frame preview with `npm run still` to verify visual layout before rendering the complete MP4 video.
+
+---
+
+## 🐙 Uploading & Pushing to GitHub
+
+To publish this repository to your GitHub account:
+
+### 1. Create a New Repository on GitHub
+Go to [github.com/new](https://github.com/new) and create a repository named `3d-assets` (or your preferred name). You can choose **Public** or **Private**. Do **not** initialize with a README, .gitignore, or license (they are already included).
+
+### 2. Link Remote & Push
+In your terminal, run:
+```bash
+# Add your GitHub repository as origin (replace with your repo URL)
+git remote add origin https://github.com/<YOUR-USERNAME>/3d-assets.git
+
+# Ensure default branch is main
+git branch -M main
+
+# Push all commits and branches
+git push -u origin main
+```
 
 ---
 
 ## 📄 License
-UNLICENSED - Created for proprietary 3D video assets & autonomous directing.
+[MIT License](./LICENSE) - Free to use, adapt, and build upon.

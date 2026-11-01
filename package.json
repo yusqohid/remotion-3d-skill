@@ -1,8 +1,21 @@
 {
   "name": "3d-assets",
   "version": "1.0.0",
-  "description": "Deterministic 3D Animation Asset Library for Remotion & Antigravity Agent Skill",
+  "description": "Deterministic 3D Animation Asset Library for Remotion & Universal Multi-Agent Skill (Antigravity, Claude, Cursor, Windsurf, Copilot, Cline)",
+  "license": "MIT",
   "private": true,
+  "keywords": [
+    "remotion",
+    "threejs",
+    "react-three-fiber",
+    "3d-assets",
+    "motion-graphics",
+    "diorama",
+    "antigravity",
+    "claude-code",
+    "cursor-rules",
+    "agent-skills"
+  ],
   "scripts": {
     "dev": "remotion studio apps/studio/src/index.ts",
     "build": "remotion bundle apps/studio/src/index.ts",
