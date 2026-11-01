@@ -13,16 +13,14 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@3d-assets/core": ["packages/core/src/index.ts"],
-      "@3d-assets/assets": ["packages/assets/src/index.ts"],
-      "@3d-assets/remotion": ["packages/remotion/src/index.ts"]
+      "@3d-assets/core": ["templates/core/index.ts"],
+      "@3d-assets/assets": ["templates/assets/index.ts"],
+      "@3d-assets/remotion": ["templates/remotion/index.ts"]
     }
   },
   "include": [
-    "packages/**/*.ts",
-    "packages/**/*.tsx",
-    "apps/**/*.ts",
-    "apps/**/*.tsx",
-    ".agents/**/*.ts"
+    "templates/**/*.ts",
+    "templates/**/*.tsx",
+    "scripts/**/*.ts"
   ]
 }

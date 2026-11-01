@@ -1,30 +1,22 @@
-# CLAUDE.md — Claude Code Guidelines
+# CLAUDE.md — Claude Code Guidelines for Remotion 3D Skill
 
 ## Overview
-This repository is a deterministic 3D animation video library powered by Three.js, React Three Fiber, and Remotion. It features an integrated Multi-Agent Skill for automated 3D scene directing, composition, and video rendering.
+This repository is a Standalone Universal Multi-Agent Skill for composing and rendering deterministic 3D Remotion video assets using Three.js and React Three Fiber.
 
 ---
 
 ## Essential Commands
 
 ```bash
-# Typecheck TypeScript across workspace
-npm run typecheck
-
-# Launch interactive Remotion Studio preview
-npm run dev
-
 # Inspect all available 3D components and prop types
 npm run list-assets
 
-# Scaffold a new scene boilerplate
-npm run scaffold -- --name=MyNewScene --template=diorama-explainer --ratio=9:16
+# Scaffold a new scene and inject self-contained 3D templates into target project
+npm run scaffold -- --name=MyNewScene --template=diorama-explainer --inject
 
-# Render a still preview frame
-npm run still -- <CompositionId> out/preview.jpeg --frame=30
-
-# Render full video MP4
-npm run render -- <CompositionId> out/<CompositionId>.mp4
+# In target Remotion project, install 3D rendering dependencies:
+npm install three @react-three/fiber @remotion/three zod
+npm install -D @types/three
 ```
 
 ---
@@ -52,10 +44,9 @@ const rotationY = (frame / 60) * Math.PI * 2;
 
 ---
 
-## Agent Skill & References
-For in-depth recipes and asset catalog, consult:
-- `AGENTS.md` - Core development standards & conventional commits
-- `.agents/skills/remotion-3d-assets/SKILL.md` - Main agent workflow
-- `.agents/skills/remotion-3d-assets/references/asset-catalog.md` - Detailed asset properties
-- `.agents/skills/remotion-3d-assets/references/composition-templates.md` - Scene composition blueprints
-- `.agents/skills/remotion-3d-assets/references/camera-recipes.md` - Cinematic camera presets
+## References & Templates
+- `SKILL.md` - Primary agent workflow and procedure
+- `references/asset-catalog.md` - 25+ detailed 3D asset properties & Zod schemas
+- `references/composition-templates.md` - 9:16 vertical & 16:9 landscape scene blueprints
+- `references/camera-recipes.md` - Cinematic camera presets (`handheldDrift`, `orbit`, `pushIn`)
+- `templates/` - Ready-to-inject components (`assets`, `core`, `remotion`, `scenes`)

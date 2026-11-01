@@ -55,23 +55,28 @@ export const RotatingMesh = () => {
 ## 2. Repository Architecture & Layout
 
 ```text
-/home/light/Dev/3d-assets/
-├── .agents/
-│   └── skills/
-│       └── remotion-3d-assets/       # Antigravity Agent Skill
-│           ├── SKILL.md              # Entry point & triggers
-│           ├── references/           # Detailed catalog & recipes
-│           └── scripts/              # Automated composition scaffolders
-├── packages/
-│   ├── core/                         # Pure deterministic math & lighting
+remotion-3d-skill/
+├── SKILL.md                          # Universal Agent Skill definition & triggers
+├── references/                       # Detailed catalogs & composition blueprints
+│   ├── asset-catalog.md              # 25+ 3D components & prop specifications
+│   ├── camera-recipes.md             # Camera motion choreography
+│   └── composition-templates.md      # Vertical & landscape blueprints
+├── scripts/                          # Standalone CLI tools & code injectors
+│   ├── list-assets.ts                # Asset catalog inspection CLI
+│   └── scaffold-scene.ts             # Scene generator & template injector
+├── templates/                        # Injectable 3D assets, math & container
 │   ├── assets/                       # Reusable 3D components (R3F)
-│   └── remotion/                     # Remotion canvas adapters & composition helpers
-├── apps/
-│   └── studio/                       # Remotion Studio application & demo gallery
+│   ├── core/                         # Pure deterministic math & lighting
+│   ├── remotion/                     # Remotion canvas adapters & camera rigs
+│   └── scenes/                       # Example reference scenes
+├── .agents/skills/remotion-3d-skill/ # Antigravity agent discovery
+├── .claude/skills/remotion-3d-skill/ # Claude Code agent discovery
+├── .cursor/rules/                    # Cursor IDE rules
 ├── AGENTS.md                         # This file
-├── PRD.md                            # Product Requirements Document
-├── package.json                      # Root workspace config
-└── tsconfig.json                     # Root TypeScript configuration
+├── CLAUDE.md                         # Claude Code guidelines
+├── README.md                         # Quickstart & installation guide
+├── LICENSE                           # MIT License
+└── package.json                      # Standalone CLI dependencies
 ```
 
 ---

@@ -1,45 +1,29 @@
 {
   "name": "remotion-3d-skill",
   "version": "1.0.0",
-  "description": "Deterministic 3D Animation Asset Library for Remotion & Universal Multi-Agent Skill (Antigravity, Claude, Cursor, Windsurf, Copilot, Cline)",
+  "description": "Standalone Universal Multi-Agent Skill for composing and rendering deterministic 3D Remotion video assets",
   "license": "MIT",
-  "private": true,
   "keywords": [
     "remotion",
     "threejs",
     "react-three-fiber",
-    "3d-assets",
-    "motion-graphics",
-    "diorama",
+    "agent-skills",
     "antigravity",
     "claude-code",
     "cursor-rules",
-    "agent-skills"
+    "3d-assets",
+    "diorama",
+    "motion-graphics"
   ],
   "scripts": {
-    "dev": "remotion studio apps/studio/src/index.ts",
-    "build": "remotion bundle apps/studio/src/index.ts",
-    "render": "remotion render apps/studio/src/index.ts",
-    "still": "remotion still apps/studio/src/index.ts",
-    "typecheck": "tsc --noEmit",
-    "list-assets": "tsx .agents/skills/remotion-3d-assets/scripts/list-assets.ts",
-    "scaffold": "tsx .agents/skills/remotion-3d-assets/scripts/scaffold-scene.ts"
+    "list-assets": "tsx scripts/list-assets.ts",
+    "scaffold": "tsx scripts/scaffold-scene.ts"
   },
   "dependencies": {
-    "@react-three/fiber": "^8.17.10",
-    "@remotion/cli": "^4.0.218",
-    "@remotion/three": "^4.0.218",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "remotion": "^4.0.218",
-    "three": "^0.168.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^22.7.0",
-    "@types/react": "^18.3.5",
-    "@types/react-dom": "^18.3.0",
-    "@types/three": "^0.168.0",
     "tsx": "^4.19.1",
     "typescript": "^5.6.2"
   }
