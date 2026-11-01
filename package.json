@@ -1,12 +1,10 @@
 {
   "name": "remotion-3d-skill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Standalone Universal Multi-Agent Skill & CLI for composing and rendering deterministic 3D Remotion video assets",
   "license": "MIT",
   "author": "Yusqo Hid",
-  "bin": {
-    "remotion-3d-skill": "./bin/cli.js"
-  },
+  "bin": "./bin/cli.js",
   "files": [
     "bin",
     "scripts",
