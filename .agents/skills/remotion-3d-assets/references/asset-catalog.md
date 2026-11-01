@@ -150,6 +150,60 @@ Urban infrastructure props with glowing fixtures.
 - `Streetlamp`: `height`, `poleColor`, `lightColor`, `position`
 - `TrafficLight`: `height`, `activeColor` (`'red'` | `'yellow'` | `'green'`), `position`
 
+### `<LollipopTree />`
+Stylized spherical canopy tree on a slender wooden trunk.
+- **Props**:
+  - `position`: `[x, y, z]`
+  - `scale`: `number` (default: `1`)
+  - `foliageColor`: `string` (hex, default: `'#52835f'`)
+  - `trunkColor`: `string` (hex, default: `'#856041'`)
+
+### `<CurtainWallSkyscraper />`
+28-story translucent glass skyscraper with interior white floor slabs, structural columns, ground plaza, and perimeter blue barrier.
+- **Props**:
+  - `position`: `[x, y, z]`
+  - `height`: `number` (default: `22`)
+  - `width`: `number` (default: `3.8`)
+  - `depth`: `number` (default: `3.4`)
+  - `glassColor`: `string` (hex, default: `'#c2d6d0'`)
+  - `glassOpacity`: `number` (default: `0.55`)
+  - `floorCount`: `number` (default: `28`)
+  - `showPlaza`: `boolean` (default: `true`)
+  - `showBlueBarrier`: `boolean` (default: `true`)
+
+### `<ModernCurvedTower />`
+Semi-cylindrical curved glass skyscraper with tiered mechanical crown and antenna.
+- **Props**:
+  - `position`: `[x, y, z]`
+  - `height`: `number` (default: `14`)
+  - `radius`: `number` (default: `2.2`)
+  - `glassColor`: `string` (default: `'#b0cecc'`)
+
+### `<SteppedCommercialBlock />`
+Mid-rise contemporary commercial building with setback terrace gardens and blue ribbon glass.
+- **Props**:
+  - `position`: `[x, y, z]`
+  - `width`: `number` (default: `4.2`)
+  - `depth`: `number` (default: `3.6`)
+  - `facadeColor`: `string` (default: `'#f1f5f9'`)
+
+### `<MiniatureHouse />`
+Charming residential house with terracotta roof. Supports multiple architectural styles.
+- **Props**:
+  - `variant`: `'cottage'` | `'townhouse'` | `'apartment'` | `'villa'` (default: `'cottage'`)
+  - `position`: `[x, y, z]`
+  - `rotationY`: `number` (radians)
+  - `scale`: `number` (default: `1`)
+  - `wallColor`: `string` (default: `'#faf7f0'`)
+  - `roofColor`: `string` (default: `'#d2543e'`)
+
+### `<DistantSkyline />`
+Stepped and matrix silhouette towers providing atmospheric background depth for cityscapes.
+- **Props**:
+  - `position`: `[x, y, z]` (default: `[0, 0, -20]`)
+  - `scale`: `number` (default: `1`)
+  - `tintColor`: `string` (default: `'#cfc8b6'`)
+
 ---
 
 ## 5. Motion Graphics & Data Visualizers (`@3d-assets/assets`)
