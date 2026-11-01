@@ -14,9 +14,19 @@ Inspired by **Stylized Low-Poly Miniature Diorama Explainers** (architectural cu
    - Never uses `requestAnimationFrame`, `Date.now()`, or asynchronous delta clocks.
 2. **Curated 3D Asset Catalog (`@3d-assets/assets`)**:
    - **Characters**: `<LowPolyCharacter />` (with `casual`, `worker`, and `scooterRider` skins; `idle`, `walk`, `wave`, `point`, `ride` actions), `<Stickman3D />`.
+   - **Metropolis Architecture & Diorama (Reference Matched)**:
+     - `<CurtainWallSkyscraper />`: 28-story translucent glass skyscraper with internal white floor slabs, structural columns, entrance portal, and blue perimeter barrier.
+     - `<ModernCurvedTower />`: Semi-cylindrical curved glass skyscraper with tiered crown.
+     - `<SteppedCommercialBlock />`: Mid-rise contemporary commercial building with setback terrace gardens.
+     - `<HighRiseTower />`: Modern glass/concrete high-rise with antenna mast.
+     - `<MiniatureHouse />`: Charming residential houses with terracotta roofs (`cottage`, `townhouse`, `apartment`, `villa`).
+     - `<DistantSkyline />`: Stepped and matrix silhouette towers for deep atmospheric perspective.
+     - `<LollipopTree />`: Stylized round spherical trees on slender trunks.
+   - **Vehicles & Infrastructure**:
+     - `<LowPolyCar />` (Yellow city taxi with spinning wheels and headlights), `<LowPolyScooter />` (Scooter with rider and vibration physics), `<Streetlamp />`, `<TrafficLight />`, `<LowPolyCloud />`.
    - **Explainer & Structural Cutaways**: `<StructuralCutaway />` (concrete beam showing internal steel rebars and stirrups with dynamic load deflection), `<TechnicalCallout3D />` (3D anchored leader line and badge), `<ForceVectorArrow />` (downward/sway force arrows).
-   - **Environments & Stages**: `<DioramaStage />` (floating miniature ground slice with subsoil layers, faceted trees, and picket fence), `<InfiniteCyberGrid />` (perspective infinite grid).
-   - **Motion Graphics**: `<FloatingGlassCard />` (frosted glass PBR card with glowing frame), `<Animated3DBarChart />` (staggered rising 3D data bars), `<CryptoToken3D />` (beveled rotating gold/neon coin).
+   - **Environments & Stages**: `<DioramaStage />`, `<UrbanCityDiorama />`, `<InfiniteCyberGrid />`.
+   - **Motion Graphics**: `<FloatingGlassCard />`, `<Animated3DBarChart />`, `<CryptoToken3D />`.
 3. **Camera Choreography (`@3d-assets/remotion`)**:
    - `<CinematicCamera />` supporting `handheldDrift` (organic micro-motion for explainers), `orbit` (turntable rotation), and `pushIn` (dolly zoom).
 4. **Antigravity Agent Skill (`remotion-3d-assets`)**:
